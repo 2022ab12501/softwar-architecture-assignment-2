@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 2022ab12501-manas-das
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: 2022ab12501-manas-das
+  template:
+    metadata:
+      labels:
+        app: 2022ab12501-manas-das
+    spec:
+      containers:
+        - name: 2022ab12501-manas-das
+          image: 2022ab12501/2022ab12501-manas-das:latest
+          ports:
+            - containerPort: 5000
